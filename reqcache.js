@@ -67,6 +67,7 @@ async function makeRequest({method, fullUrl, body, headers}) {
 
 	delete resp.headers['content-length'];
 	delete resp.headers['transfer-encoding'];
+	delete resp.headers['connection'];
 
 	if (config.debug) console.debug(`response: ${resp.status} - ${fullUrl}`);
 
